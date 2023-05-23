@@ -50,9 +50,6 @@ public class KnockKnockMachineController {
     }
 
     private String getLine(int num, int id) {
-        if (num <= 0) {
-            return "Lines start from /'line1'";
-        }
 
         if (num > jokes[id].length) {
             num = jokes[id].length;

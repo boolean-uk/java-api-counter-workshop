@@ -5,3 +5,5 @@ server:
     include-binding-errors: always
     include-stacktrace: never
     include-exception: false
+    whitelabel:
+      enabled: false
