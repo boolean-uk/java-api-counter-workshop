@@ -1,6 +1,7 @@
 package com.booleanuk.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -40,4 +41,13 @@ public class JokeMachineController {
     public int quantityOfJokes() {
         return this.jokes.size();
     }
+
+    @GetMapping("/{index}")
+    public String getSpecificJoke(@PathVariable(name = "index") int index) {
+        if(index >= this.jokes.size()) {
+            return "Please choose a smaller number";
+        }
+        return this.jokes.get(index);
+    }
+
 }
