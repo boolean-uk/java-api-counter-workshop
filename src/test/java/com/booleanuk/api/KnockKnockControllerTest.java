@@ -9,12 +9,12 @@ public class KnockKnockControllerTest {
     public void testGettingRandomJokeLineByLine(){
         KnockKnockController knockKnockController = new KnockKnockController(100);
         knockKnockController.getLine(1);
-        Assertions.assertEquals("Knock, Knock.\n\nWho's There?\n\nLettuce." +
-                "\n\nLettuce who?\n\nLettuce in, it's freezing out here\n\n", knockKnockController.getLine(5));
+        Assertions.assertEquals("Knock, Knock.<br><br>Who's There?<br><br>Lettuce." +
+                "<br><br>Lettuce who?<br><br>Lettuce in, it's freezing out here<br><br>", knockKnockController.getLine(5));
 
         knockKnockController.getLine(1);
-        Assertions.assertEquals("Knock, Knock.\n\nWho's There?\n\nJustin." +
-                "\n\nJustin who?\n\nJustin time for dinner!\n\n", knockKnockController.getLine(5));
+        Assertions.assertEquals("Knock, Knock.<br><br>Who's There?<br><br>Justin." +
+                "<br><br>Justin who?<br><br>Justin time for dinner!<br><br>", knockKnockController.getLine(5));
 
     }
 }

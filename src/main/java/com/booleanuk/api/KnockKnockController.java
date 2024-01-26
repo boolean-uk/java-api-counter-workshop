@@ -38,7 +38,7 @@ public class KnockKnockController {
         else{
             StringBuilder sb = new StringBuilder();
             for(int i = 0; i < lineNumber; i++){
-                sb.append(jokes.get(index).get(i)).append("\n\n");
+                sb.append(jokes.get(index).get(i)).append("<br><br>");
             }
             return sb.toString();
         }
